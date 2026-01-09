@@ -7,3 +7,5 @@ Then the objective is to properly set up the UI, following which is to add funct
 COMPLETE STEP-BY-STEP DEVELOPMENT MAP:
 
 1. Create and push html boilerplate.
+2. Create an empty javascipt file script.js and then push the file to git, github.
+3.
