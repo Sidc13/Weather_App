@@ -8,4 +8,5 @@ COMPLETE STEP-BY-STEP DEVELOPMENT MAP:
 
 1. Create and push html boilerplate.
 2. Create an empty javascipt file script.js and then push the file to git, github.
-3.
+3. Set up an environment for Tailwind: Install tailwind CSS using the tailwind CLI tool (no custom PostCSS pipeline) then create an 'src' folder with 'index.html' 'input.css' and 'output.css'. Link the HTML file with 'output.css'.
+4. Create a gitignore file to ignore files that are not needed, namely node modules, environment variables and so on.
