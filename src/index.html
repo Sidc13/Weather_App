@@ -3,8 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
+    <link href="./output.css" rel="stylesheet" />
     <title>Weather Forecast App</title>
   </head>
-  <body></body>
+  <body class="min-h-screen bg-slate-900 text-slate-100">
+    <main class="mx-auto max-w-6xl px-4 py-6 space-y-8">
+      <!-- Heading -->
+      <header class="text-center">
+        <h1 class="text-xl sm:text-2xl lg:text-4xl font-semibold">
+          Weather Forecast Application
+        </h1>
+      </header>
+
+      <!-- Search & Location Controls -->
+      <section class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+        <input
+          type="text"
+          placeholder="Enter city name"
+          class="flex-1 rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-slate-500"
+        />
+
+        <button
+          class="rounded-md bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600 transition"
+        >
+          Search
+        </button>
+
+        <button
+          class="rounded-md bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600 transition"
+        >
+          Use Current Location
+        </button>
+      </section>
+
+      <!-- Recently Searched Cities Dropdown (Initially Hidden) -->
+      <section class="max-w-xl mx-auto hidden">
+        <select
+          class="w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-slate-500"
+        >
+          <option>Select a recently searched city</option>
+        </select>
+      </section>
+
+      <!-- Error Message Area -->
+      <section class="max-w-xl mx-auto hidden">
+        <p class="text-sm text-red-400 text-center">
+          Invalid city name. Please try again.
+        </p>
+      </section>
+
+      <!-- Weather Alert Area -->
+      <section class="max-w-xl mx-auto hidden">
+        <p class="text-sm text-yellow-400 text-center">
+          Extreme temperature alert!
+        </p>
+      </section>
+
+      <!-- Current Weather Card -->
+      <section class="rounded-xl border border-slate-700 bg-slate-800 p-6">
+        <div class="flex flex-col md:flex-row md:justify-between gap-6">
+          <div class="space-y-1">
+            <p class="text-sm text-slate-400">City Name</p>
+            <div class="flex items-center gap-3">
+              <h2 class="text-3xl font-semibold">28°</h2>
+              <button class="text-sm underline text-slate-300">°C / °F</button>
+            </div>
+            <p class="text-sm text-slate-300">Weather Condition</p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-slate-400">Humidity</p>
+              <p>70%</p>
+            </div>
+            <div>
+              <p class="text-slate-400">Wind Speed</p>
+              <p>10 km/h</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 Day Forecast -->
+      <section class="space-y-3">
+        <h3 class="text-sm uppercase tracking-wide text-slate-400">
+          5 Day Forecast
+        </h3>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <!-- Forecast Card -->
+          <div
+            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+          >
+            <p class="text-sm text-slate-400">Date</p>
+            <p class="text-lg font-semibold">24°</p>
+            <p class="text-xs">🌡 Temp</p>
+            <p class="text-xs">💨 Wind</p>
+            <p class="text-xs">💧 Humidity</p>
+          </div>
+
+          <div
+            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+          >
+            <p class="text-sm text-slate-400">Date</p>
+            <p class="text-lg font-semibold">23°</p>
+            <p class="text-xs">🌡 Temp</p>
+            <p class="text-xs">💨 Wind</p>
+            <p class="text-xs">💧 Humidity</p>
+          </div>
+
+          <div
+            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+          >
+            <p class="text-sm text-slate-400">Date</p>
+            <p class="text-lg font-semibold">22°</p>
+            <p class="text-xs">🌡 Temp</p>
+            <p class="text-xs">💨 Wind</p>
+            <p class="text-xs">💧 Humidity</p>
+          </div>
+
+          <div
+            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+          >
+            <p class="text-sm text-slate-400">Date</p>
+            <p class="text-lg font-semibold">25°</p>
+            <p class="text-xs">🌡 Temp</p>
+            <p class="text-xs">💨 Wind</p>
+            <p class="text-xs">💧 Humidity</p>
+          </div>
+
+          <div
+            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+          >
+            <p class="text-sm text-slate-400">Date</p>
+            <p class="text-lg font-semibold">21°</p>
+            <p class="text-xs">🌡 Temp</p>
+            <p class="text-xs">💨 Wind</p>
+            <p class="text-xs">💧 Humidity</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
