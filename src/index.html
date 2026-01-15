@@ -21,25 +21,29 @@
           type="text"
           placeholder="Enter city name"
           class="flex-1 rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-slate-500"
+          id="inputField"
         />
 
         <button
           class="rounded-md bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600 transition"
+          id="searchBtn"
         >
           Search
         </button>
 
         <button
           class="rounded-md bg-slate-700 px-4 py-2 text-sm hover:bg-slate-600 transition"
+          id="currentLocationButton"
         >
           Use Current Location
         </button>
       </section>
 
       <!-- Recently Searched Cities Dropdown (Initially Hidden) -->
-      <section class="max-w-xl mx-auto hidden">
+      <section class="max-w-xl mx-auto hidden" id="cityDropdownSection">
         <select
           class="w-full rounded-md bg-slate-800 border border-slate-700 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-slate-500"
+          id="cityDropdown"
         >
           <option>Select a recently searched city</option>
         </select>
@@ -47,14 +51,14 @@
 
       <!-- Error Message Area -->
       <section class="max-w-xl mx-auto hidden">
-        <p class="text-sm text-red-400 text-center">
+        <p class="text-sm text-red-400 text-center" id="errorMsg">
           Invalid city name. Please try again.
         </p>
       </section>
 
       <!-- Weather Alert Area -->
       <section class="max-w-xl mx-auto hidden">
-        <p class="text-sm text-yellow-400 text-center">
+        <p class="text-sm text-yellow-400 text-center" id="extWeather">
           Extreme temperature alert!
         </p>
       </section>
@@ -63,22 +67,26 @@
       <section class="rounded-xl border border-slate-700 bg-slate-800 p-6">
         <div class="flex flex-col md:flex-row md:justify-between gap-6">
           <div class="space-y-1">
-            <p class="text-sm text-slate-400">City Name</p>
+            <p class="text-sm text-slate-400" id="cityName">City Name</p>
             <div class="flex items-center gap-3">
-              <h2 class="text-3xl font-semibold">28°</h2>
-              <button class="text-sm underline text-slate-300">°C / °F</button>
+              <h2 class="text-3xl font-semibold" id="cityTemp">28°</h2>
+              <button class="text-sm underline text-slate-300" id="unitToggle">
+                °C / °F
+              </button>
             </div>
-            <p class="text-sm text-slate-300">Weather Condition</p>
+            <p class="text-sm text-slate-300" id="weatherCondition">
+              Weather Condition
+            </p>
           </div>
 
           <div class="grid grid-cols-2 gap-4 text-sm">
             <div>
               <p class="text-slate-400">Humidity</p>
-              <p>70%</p>
+              <p id="humidity">70%</p>
             </div>
             <div>
               <p class="text-slate-400">Wind Speed</p>
-              <p>10 km/h</p>
+              <p id="windSpeed">10 km/h</p>
             </div>
           </div>
         </div>
@@ -93,7 +101,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           <!-- Forecast Card -->
           <div
-            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+            class="forecastCard rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
           >
             <p class="text-sm text-slate-400">Date</p>
             <p class="text-lg font-semibold">24°</p>
@@ -103,7 +111,7 @@
           </div>
 
           <div
-            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+            class="forecastCard rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
           >
             <p class="text-sm text-slate-400">Date</p>
             <p class="text-lg font-semibold">23°</p>
@@ -113,7 +121,7 @@
           </div>
 
           <div
-            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+            class="forecastCard rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
           >
             <p class="text-sm text-slate-400">Date</p>
             <p class="text-lg font-semibold">22°</p>
@@ -123,7 +131,7 @@
           </div>
 
           <div
-            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+            class="forecastCard rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
           >
             <p class="text-sm text-slate-400">Date</p>
             <p class="text-lg font-semibold">25°</p>
@@ -133,7 +141,7 @@
           </div>
 
           <div
-            class="rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
+            class="forecastCard rounded-lg border border-slate-700 bg-slate-800 p-4 text-center space-y-2"
           >
             <p class="text-sm text-slate-400">Date</p>
             <p class="text-lg font-semibold">21°</p>
