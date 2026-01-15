@@ -11,3 +11,4 @@ COMPLETE STEP-BY-STEP DEVELOPMENT MAP:
 3. Set up an environment for Tailwind: Install tailwind CSS using the tailwind CLI tool (no custom PostCSS pipeline) then create an 'src' folder with 'index.html' 'input.css' and 'output.css'. Link the HTML file with 'output.css'.
 4. Create a gitignore file to ignore files that are not needed, namely node modules, environment variables and so on.
 5. Develop a simple UI for the weather app, there will be a search bar for naming the city the user wants. There will be a space/hero section where the current weather will be displayed. Below that we will have a 5-day forecast (smaller boxes showcasing the details). The same shall be optimized for different screen sizes: Desktop, iPad mini, iPhone SE.
+6. Now in the javascript file, all the sections/paragraphs/buttons will have to be assigned a variable so that the UI can perform some tasks.
